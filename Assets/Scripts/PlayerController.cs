@@ -7,12 +7,12 @@ public class PlayerController : MonoBehaviour
   Vector3 startPos;
   Vector3 targetPos;
 
-  // Animator anim;
+  Animator anim;
 
-  // private void Start()
-  // {
-  //   anim = GetComponent<Animator>();
-  // }
+  private void Start()
+  {
+    anim = GetComponent<Animator>();
+  }
 
   bool isMoving = false;
   float moveTime = 0.2f;
@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
     startPos = transform.position;
     targetPos = transform.position + Vector3.forward;
+
+    // anim.SetTrigger("Jump");
 
     float elapsedTime = 0f;
 
